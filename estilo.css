@@ -7,7 +7,9 @@ body {
     background: #e9ecf4;
     color: #000;
     font-family: 'roboto', sans-serif;
-    background-image: url('img/fondo.jpg');
+    background: rgb(174,238,207);
+    background: radial-gradient(circle, rgba(174,238,207,1) 0%, rgba(0,135,171,1) 100%);
+    
 
 
 }
@@ -45,20 +47,36 @@ body {
 }
 
 .contenedor .bienvenido {
-    background: #0087AB;
+    width: 870px;
+    height: 360px;
     grid-column-start: 1;
     grid-column-end: 2;
+    background: rgb(0,135,171);
+    background: linear-gradient(180deg, rgba(0,135,171,1) 36%, rgba(111,198,182,1) 77%);
+    margin-top: 150px;
     
 
 
 
 }
 
+.imagen_homebanking {
+    width: 870px;
+    height: 360px;
+}
+
+
 .contenedor .login {
-    background: #0087AB;
+    background: rgb(0,135,171);
+    background: linear-gradient(180deg, rgba(0,135,171,1) 36%, rgba(0,171,163,0.40940126050420167) 74%);
     color: #fff;
     grid-column: 2 / 2;
     text-align: center;
+    margin-top: 150px;
+    margin-left: 100px;
+    box-shadow: 12px 12px 12px 1px rgba(54,54,54,0.69);
+-webkit-box-shadow: 12px 12px 12px 1px rgba(54,54,54,0.69);
+-moz-box-shadow: 12px 12px 12px 1px rgba(54,54,54,0.69);
     
     
     
@@ -82,7 +100,7 @@ body {
 }
 .form-register {
     width: 400px;
-    background: #0087AB;
+    text-shadow:0px 1px 0px #0c1418;
     padding: 30px;
     border-radius: 4px;
     font-family: 'calibri';
@@ -128,10 +146,26 @@ body {
 }
 .form-register .botons {
     width: 100%;
-    background: #1f53c5;
-    border:none;
-    padding: 12px;
-    color: white;
     margin: 16px 0;
     font-size: 16px;
-}
+    box-shadow: 0px 10px 14px -7px #276873;
+    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color:#599bb3;
+    border-radius:8px;
+    border: none;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-weight:bold;
+    padding:13px 32px;
+    text-shadow:0px 1px 0px #3d768a;
+    }
+    
+    .botons:hover {
+        background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+        background-color:#408c99;
+    }
+    .botons:active {
+        position:relative;
+        top:1px;
+    }
