@@ -2,7 +2,9 @@ body {
     background: rgb(2,86,138);
     background: linear-gradient(90deg, rgba(2,86,138,1) 2%, rgba(106,155,186,1) 54%);
     background: linear-gradient(90deg, rgba(2,86,138,1) 2%, rgba(106,155,186,1) 54%);
+    background-repeat: no-repeat;
     margin-top: 0;
+    margin-right: 100px;
     
 }
 .contenedor .menu {
@@ -13,7 +15,8 @@ body {
     gap: 5px;
     -webkit-box-shadow: 4px 6px 23px -8px #000000; 
     box-shadow: 4px 6px 23px -8px #000000;
-    background: linear-gradient(90deg, rgba(2,86,138,1) 2%, rgba(106,155,186,1) 54%)
+    background: linear-gradient(90deg, rgba(2,86,138,1) 2%, rgba(106,155,186,1) 54%);
+    margin-right: -100px;
     
     
 }
@@ -63,6 +66,7 @@ body {
     -webkit-box-shadow: 2px 4px 11px -3px #000000; 
     box-shadow: 2px 4px 11px -3px #000000;
     margin-top: 10px;
+    /* margin-right: -100px; */
     cursor: pointer;
 }
 
@@ -180,7 +184,10 @@ body {
     background: linear-gradient(90deg, rgba(2,86,138,1) 2%, rgba(106,155,186,1) 54%);
     margin-top: 20px;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
     margin-left: 20px;
+    /* margin-right: -290px; */
     /* grid-template-columns: 150px 150px 150px 150px 150px;
     grid-template-rows: 100px; */
     
