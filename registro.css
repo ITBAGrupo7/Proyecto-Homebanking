@@ -5,11 +5,7 @@
 }
 body {
   background: rgb(2, 86, 138);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 86, 138, 1) 2%,
-    rgba(106, 155, 186, 1) 54%
-  );
+  background-image: url(img/proto/bg4.jpg);
   color: #fff;
 }
 
