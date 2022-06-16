@@ -23,6 +23,10 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         element.casa.nombre != "Bitcoin" &&
         element.casa.nombre != "Argentina"
       ) {
+<<<<<<< HEAD
+=======
+        let elemc=0;
+>>>>>>> 6f9e3791e4493734285d8deeddfeed3aa2210710
         let elDiv = document.createElement("div");
         elDiv.className = "tarjeta-divisa";
 
@@ -50,13 +54,28 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
           ? (variacion.className = "variacion-red")
           : (variacion.className = "variacion-green");
 
+        debugger
+        if (element.casa.variacion.includes("-")) {
+          debugger
+          variacion.className = "variacion-red";
+          debugger
+        }else{
+          debugger
+          variacion.className = "variacion-green";
+          debugger
+        }
+        detalle=document.createElement("p");
+        detalle.className = "detalle";
+        detalle.innerHTML = "Variación en las últimas 24h";
         elDiv.append(nombre);
         elDiv.append(valores);
         elDiv.append(variacion);
+        elDiv.append(detalle);
         elDiv.append(date);
         elDiv.setAttribute("id", "item" + i);
         i++;
         divisas.append(elDiv);
+        elemc++;
       }
     });
   });
