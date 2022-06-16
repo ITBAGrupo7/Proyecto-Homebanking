@@ -37,7 +37,10 @@
     padding: .5em;
     background-color: rgb(112, 129, 139);
     border-radius: 1em;
-
+    transition: 1s;
+}
+.tarjeta-divisa:hover{
+    background-color: rgb(76, 112, 133);
 }
 .detalle{
     font-size: 12px;
