@@ -12,7 +12,7 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         element.casa.nombre != "Bitcoin" &&
         element.casa.nombre != "Argentina"
       ) {
-
+        let elemc=0;
         let elDiv = document.createElement("div");
         elDiv.className = "tarjeta-divisa";
 
@@ -43,12 +43,16 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
           variacion.className = "variacion-green";
           debugger
         }
-
+        detalle=document.createElement("p");
+        detalle.className = "detalle";
+        detalle.innerHTML = "Variación en las últimas 24h";
         elDiv.append(nombre);
         elDiv.append(valores);
         elDiv.append(variacion);
+        elDiv.append(detalle);
         elDiv.append(date);
         divisas.append(elDiv);
+        elemc++;
       }
     });
   });
