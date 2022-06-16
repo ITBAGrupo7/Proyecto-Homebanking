@@ -31,7 +31,18 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         valores.append(venta);
 
         variacion = document.createElement("p");
-        variacion.innerHTML = element.casa.variacion;
+        variacion.innerHTML = element.casa.variacion + "%";
+        console.log(element.casa.variacion);
+        debugger
+        if (element.casa.variacion.includes("-")) {
+          debugger
+          variacion.className = "variacion-red";
+          debugger
+        }else{
+          debugger
+          variacion.className = "variacion-green";
+          debugger
+        }
 
         elDiv.append(nombre);
         elDiv.append(valores);
