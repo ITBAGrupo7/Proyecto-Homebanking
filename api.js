@@ -1,6 +1,6 @@
 const divisas = document.getElementById("divisas");
 const today = new Date();
-let date = "Actualizado: " + today.getDate()+'-'+(today.getMonth()+1)+'-'+ today.getFullYear() + " " + today.getHours() + ":" + today.getMinutes();
+let date = "Actualizado: " + today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear() + " " + today.getHours() + ":" + today.getMinutes();
 
 fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
   .then((response) => response.json())
@@ -12,12 +12,12 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         element.casa.nombre != "Bitcoin" &&
         element.casa.nombre != "Argentina"
       ) {
-        debugger
+
         let elDiv = document.createElement("div");
         elDiv.className = "tarjeta-divisa";
 
         nombre = document.createElement("h2");
-        nombre.innerHTML = element.casa.nombre;
+        nombre.innerHTML = '<img src="img/b1.png" style="padding: 0px 10px;">' + element.casa.nombre;
 
         let valores = document.createElement("div");
         valores.className = "valores";
