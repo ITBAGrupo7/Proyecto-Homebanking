@@ -1,6 +1,7 @@
 const divisas = document.getElementById("divisas");
 const today = new Date();
 let date = "Actualizado: " + today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear() + " " + today.getHours() + ":" + today.getMinutes();
+let i = 0;
 
 fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
   .then((response) => response.json())
@@ -51,6 +52,8 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         elDiv.append(variacion);
         elDiv.append(detalle);
         elDiv.append(date);
+        elDiv.setAttribute("id", "item" + i);
+        i++;
         divisas.append(elDiv);
         elemc++;
       }
