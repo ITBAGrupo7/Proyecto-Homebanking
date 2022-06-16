@@ -1,6 +1,16 @@
 const divisas = document.getElementById("divisas");
 const today = new Date();
-let date = "Actualizado: " + today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear() + " " + today.getHours() + ":" + today.getMinutes();
+let date =
+  "Consultado el: " +
+  today.getDate() +
+  "-" +
+  (today.getMonth() + 1) +
+  "-" +
+  today.getFullYear() +
+  " " +
+  today.getHours() +
+  ":" +
+  today.getMinutes();
 let i = 0;
 
 fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
@@ -13,12 +23,13 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         element.casa.nombre != "Bitcoin" &&
         element.casa.nombre != "Argentina"
       ) {
-        let elemc=0;
         let elDiv = document.createElement("div");
         elDiv.className = "tarjeta-divisa";
 
         nombre = document.createElement("h2");
-        nombre.innerHTML = '<img src="img/b1.png" style="padding: 0px 10px;">' + element.casa.nombre;
+        nombre.innerHTML =
+          '<img src="img/b1.png" style="padding: 0px 10px;">' +
+          element.casa.nombre;
 
         let valores = document.createElement("div");
         valores.className = "valores";
@@ -34,6 +45,11 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         variacion = document.createElement("p");
         variacion.innerHTML = element.casa.variacion + "%";
         console.log(element.casa.variacion);
+
+        variacion.className = element.casa.variacion.includes("-")
+          ? (variacion.className = "variacion-red")
+          : (variacion.className = "variacion-green");
+
         debugger
         if (element.casa.variacion.includes("-")) {
           debugger
@@ -55,7 +71,7 @@ fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         elDiv.setAttribute("id", "item" + i);
         i++;
         divisas.append(elDiv);
-        elemc++;
+        // elemc++;
       }
     });
   });
