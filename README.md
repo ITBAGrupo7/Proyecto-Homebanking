@@ -1,6 +1,6 @@
 # Proyecto Homebanking ITBA - Santander
 
-LINK A LA PÁGINA: https://www.google.com.ar 
+LINK A LA PÁGINA: https://itbagrupo7.github.io/Proyecto-Homebanking/
 <h3>Integrantes del grupo 7:</h3>
 <ul>
   <li>Karen Ailen Lettieri</li>
